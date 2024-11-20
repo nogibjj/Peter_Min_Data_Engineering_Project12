@@ -5,7 +5,7 @@ login:
 	docker login -u ${DOCKER_USERNAME}
 
 build:
-	docker build -t ${DOCKER_IMAGE_NAME}
+	docker build -t ${DOCKER_IMAGE_NAME} .
 
 show_local_images:
 	docker images
