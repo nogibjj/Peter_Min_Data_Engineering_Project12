@@ -12,8 +12,8 @@ def random_programming_jokes():
     url = "https://v2.jokeapi.dev/joke/Programming"
     response = requests.get(url)
     response = response.json()
-    return response["joke"]
+    return f'{response["type"]} {response["delivery"]}'
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

@@ -7,6 +7,9 @@ login:
 build:
 	docker build -t ${DOCKER_IMAGE_NAME} .
 
+run:
+	docker run -p 5001:5000 -e FLASK_DEBUG=1 ${DOCKER_IMAGE_NAME}
+
 show_local_images:
 	docker images
 
